@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container,.container1{
+            margin-top: 5%;
+        }
+        .hide{
+            display: none;
+        }
+        .
+    </style>
+</head>
+<body>
+    <div>
+        <!-- 1st qtn -->
+        <img class="imgs" src="https://th.bing.com/th/id/OIP.YbnvKl5RlXvEYdKk-DtELwHaJT?w=157&h=198&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="cartoon">
+    </div>
+
+    <!-- 2nd qtn -->
+    <div>
+        <button id="btnn">HTML</button>
+    </div>
+
+    <!-- 3rd qtn -->
+     <div class="container">SANDHYA</div>
+     <BUtton class="c1" onclick="hi()">hide</BUtton>
+     <button class="c1" onclick="sh()">show</button>
+
+     <!-- 4tq qtn -->
+      <div class="container1">10K CODERS</div>
+      <button onclick="hide2()">Show/Hide</button>
+
+
+    <script>
+ // Modify element attributes: Select an image element and change its src and alt attributes.
+        var img1 = document.getElementsByClassName("imgs")[0];
+        img1.setAttribute('src',"https://th.bing.com/th/id/OIP.aVEzVyOOOpDDXlE2HAS0LAHaIF?w=181&h=198&c=7&r=0&o=5&dpr=1.5&pid=1.7")
+        img1.setAttribute('alt','miccky mouse')   
+        img1.style.width = '30%'
+        console.log(img1)
+
+
+// 2) Event handling: Write a script that adds a click event listener to a button that changes the text of a paragraph when clicked.
+        var btn1 = document.getElementById("btnn");
+        let arr =['HTML',"CSS",'JAVA script','React'];
+        let count = 1;
+        function fun(){
+            if (count == arr.length){
+                count = 0
+            }
+            btn1.innerText = arr[count];
+            count++
+            } 
+        btn1.addEventListener('click',fun);    
+        console.log(btn1) 
+        
+// 3) Dynamic class manipulation: Write a function that adds or removes a class from an element when abutton is clicked.
+            var container = document.getElementsByClassName('container')[0];
+            function hi(){
+                container.classList.add('hide')
+            }
+            function sh(){
+                container.classList.remove('hide')
+            }
+            container.classList.add('container')
+            console.log(container)
+       
+// 4) Toggle visibility: Create a button that toggles the visibility of an element by showing/hiding it on each click.
+            var container1 = document.getElementsByClassName("container1")[0];
+            function hide2(){
+                container1.classList.toggle('hide')
+            }
+            console.log(container1)
+
+
+    </script>
+</body>
+</html>
